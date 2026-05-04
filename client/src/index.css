@@ -1,0 +1,325 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Design Philosophy: Light theme with clean, minimal aesthetic
+ * - White background with black text for clarity
+ * - Noise effect on tab opening for visual feedback
+ * - Simple, professional design
+ */
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+    transform: translate(2px, 2px);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+    transform: translate(0);
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes tab-glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes noise-burst {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Light theme - White background, Black text */
+  --primary: #1a1a1a; /* Black */
+  --primary-foreground: #ffffff; /* White */
+  --sidebar-primary: #333333; /* Dark gray */
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #666666;
+  --chart-2: #1a1a1a;
+  --chart-3: #333333;
+  --chart-4: #555555;
+  --chart-5: #777777;
+  --radius: 0.25rem;
+  --background: oklch(1 0 0); /* White */
+  --foreground: oklch(0.1 0.01 0); /* Near black */
+  --card: oklch(0.98 0.001 0); /* Very light gray */
+  --card-foreground: oklch(0.1 0.01 0);
+  --popover: oklch(0.98 0.001 0);
+  --popover-foreground: oklch(0.1 0.01 0);
+  --secondary: oklch(0.95 0.001 0);
+  --secondary-foreground: oklch(0.2 0.01 0);
+  --muted: oklch(0.9 0.001 0);
+  --muted-foreground: oklch(0.4 0.01 0);
+  --accent: #1a1a1a; /* Black accent */
+  --accent-foreground: #ffffff;
+  --destructive: #d32f2f; /* Red for destructive */
+  --destructive-foreground: #ffffff;
+  --border: oklch(0.85 0.001 0);
+  --input: oklch(0.95 0.001 0);
+  --ring: #1a1a1a;
+  --sidebar: oklch(0.98 0.001 0);
+  --sidebar-foreground: oklch(0.1 0.01 0);
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: oklch(0.85 0.001 0);
+  --sidebar-ring: #1a1a1a;
+}
+
+.dark {
+  /* Dark theme */
+  --primary: #00d9ff;
+  --primary-foreground: #0a0e27;
+  --sidebar-primary: #ff006e;
+  --sidebar-primary-foreground: #0a0e27;
+  --background: oklch(0.08 0.01 280);
+  --foreground: oklch(0.95 0.01 280);
+  --card: oklch(0.12 0.01 280);
+  --card-foreground: oklch(0.95 0.01 280);
+  --popover: oklch(0.12 0.01 280);
+  --popover-foreground: oklch(0.95 0.01 280);
+  --secondary: oklch(0.15 0.02 280);
+  --secondary-foreground: oklch(0.95 0.01 280);
+  --muted: oklch(0.2 0.02 280);
+  --muted-foreground: oklch(0.7 0.02 280);
+  --accent: #00d9ff;
+  --accent-foreground: #0a0e27;
+  --destructive: #ff006e;
+  --destructive-foreground: oklch(0.95 0.01 280);
+  --border: oklch(0.2 0.02 280);
+  --input: oklch(0.15 0.02 280);
+  --ring: #00d9ff;
+  --chart-1: #39ff14;
+  --chart-2: #00d9ff;
+  --chart-3: #ff006e;
+  --chart-4: #ffbe0b;
+  --chart-5: #8338ec;
+  --sidebar: oklch(0.12 0.01 280);
+  --sidebar-foreground: oklch(0.95 0.01 280);
+  --sidebar-accent: #ff006e;
+  --sidebar-accent-foreground: oklch(0.95 0.01 280);
+  --sidebar-border: oklch(0.2 0.02 280);
+  --sidebar-ring: #00d9ff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Space Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+  
+  body, p, span, div {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+/* Light theme utility classes */
+.neon-text {
+  color: var(--foreground);
+  font-weight: bold;
+}
+
+.neon-text-magenta {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.neon-glow {
+  color: var(--foreground);
+}
+
+.glitch-effect {
+  animation: glitch 0.3s ease-in-out;
+}
+
+.tab-glitch {
+  animation: tab-glitch 0.4s ease-in-out;
+}
+
+.noise-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0px,
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  animation: noise-burst 0.15s ease-out;
+  pointer-events: none;
+  z-index: 10;
+}
