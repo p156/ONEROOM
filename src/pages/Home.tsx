@@ -13,7 +13,7 @@ import WalkthroughTabs from '@/components/WalkthroughTabs';
 
 export default function Home() {
   const [isClueListOpen, setIsClueListOpen] = React.useState(false);
-  const headerImage = '/manus-storage/スクリーンショット2026-05-03234634_74a2afdc.png';
+  const headerImage = '';
 
   const walkthroughTabs = [
     {
