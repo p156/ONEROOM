@@ -219,22 +219,6 @@ export default function Home() {
               </div>
             </div>
           </ARGCard>
-
-          <ARGCard
-            title="場所ネットワーク"
-            variant="default"
-            icon={<MapPin className="w-5 h-5" />}
-          >
-            <div className="space-y-2 font-mono text-sm text-gray-700">
-              <p>5番街の倉庫 → 座標（35.6762°N, 139.6503°E）</p>
-              <p>↓</p>
-              <p>コミュニティフォーラム → 暗号化メッセージ</p>
-              <p>↓</p>
-              <p>音声ファイル → モールス信号パターン</p>
-              <p>↓</p>
-              <p className="text-blue-600 font-bold">次の場所：???</p>
-            </div>
-          </ARGCard>
         </div>
       ),
     },
