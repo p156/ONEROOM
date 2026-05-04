@@ -27,17 +27,17 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+
+          <WouterRouter base="/arg-walkthrough-page">
+            <Router />
+          </WouterRouter>
+
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
 }
-
 export default App;
