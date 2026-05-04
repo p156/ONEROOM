@@ -27,10 +27,10 @@ export default function Home() {
             icon={<AlertCircle className="w-5 h-5" />}
           >
             <p>
-              これは代替現実ゲーム（ARG）の攻略ポータルです。上記のタブを使用して謎を解き、手がかりを発見し、ストーリーを進めていきます。
+              人のワンルームのツールです
             </p>
             <p className="text-blue-600 font-bold">
-              ステータス：ゲームは現在アクティブです。新しい手がかりが随時公開されています。
+              ステータス：現在編集中です　随時更新されていきます。
             </p>
           </ARGCard>
 
@@ -40,11 +40,7 @@ export default function Home() {
             icon={<Lightbulb className="w-5 h-5" />}
           >
             <ul className="space-y-2">
-              <li>• 「概要」タブから始めてください（今ここです）</li>
-              <li>• 「手がかり」で発見された証拠を確認</li>
-              <li>• 「タイムライン」で時系列イベントをチェック</li>
-              <li>• 「関係図」で人物・場所の関係を理解</li>
-              <li>• 「解答」で検証済みのパズル答を確認</li>
+              <li>• 「手がかり一覧」で手がかりを入手することができます。</li>
             </ul>
           </ARGCard>
 
@@ -84,111 +80,125 @@ export default function Home() {
     },
     {
       id: 'clues',
-      label: '> 手がかり',
+      label: '> 秘密の質問',
       content: (
         <div className="space-y-4">
           <ARGCard
-            title="手がかり #001"
-            variant="warning"
-            icon={<Lock className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-amber-700 font-bold">場所：</span> 5番街の古い倉庫
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">発見内容：</span> 壁に暗号化されたメッセージが見つかった
-            </p>
-            <p className="font-mono text-blue-600">
-              「影と光が出会う場所に答がある」
-            </p>
-          </ARGCard>
-
-          <ARGCard
-            title="手がかり #002"
-            variant="warning"
-            icon={<Lock className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-amber-700 font-bold">場所：</span> コミュニティフォーラム投稿（現在削除済み）
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">発見内容：</span> ユーザー「CIPHER_MASTER」が座標を投稿
-            </p>
-            <p className="font-mono text-blue-600">
-              35.6762°N, 139.6503°E
-            </p>
-          </ARGCard>
-
-          <ARGCard
-            title="手がかり #003"
+            title="No.001"
             variant="success"
             icon={<Lock className="w-5 h-5" />}
           >
             <p>
-              <span className="text-green-700 font-bold">場所：</span> 音声ファイルからデコード
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
             </p>
             <p>
-              <span className="text-green-700 font-bold">発見内容：</span> 背景ノイズにモールス信号パターン
-            </p>
-            <p className="font-mono text-green-600">
-              .... . .-.. .-.. --- （こんにちは）
-            </p>
-          </ARGCard>
-        </div>
-      ),
-    },
-    {
-      id: 'timeline',
-      label: '> タイムライン',
-      content: (
-        <div className="space-y-4">
-          <ARGCard
-            title="1日目 - 発見"
-            variant="default"
-            icon={<Clock className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-blue-600 font-bold">午前12:00</span> - 最初の手がかりがオンラインに現れる
-            </p>
-            <p>
-              <span className="text-blue-600 font-bold">午後3:45</span> - コミュニティが調査を開始
-            </p>
-            <p>
-              <span className="text-blue-600 font-bold">午後11:30</span> - 最初のパズルが解かれる
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
             </p>
           </ARGCard>
 
           <ARGCard
-            title="2日目 - エスカレーション"
-            variant="warning"
-            icon={<Clock className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-amber-700 font-bold">午前6:00</span> - 物理的な場所が発見される
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">午後2:15</span> - 第2波の手がかりが公開される
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">午後9:00</span> - コミュニティが調査チームに分かれる
-            </p>
-          </ARGCard>
-
-          <ARGCard
-            title="3日目 - ブレークスルー"
+            title="No.005"
             variant="success"
-            icon={<Clock className="w-5 h-5" />}
+            icon={<Lock className="w-5 h-5" />}
           >
             <p>
-              <span className="text-green-700 font-bold">午前10:30</span> - 重大な関連性が特定される
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
             </p>
             <p>
-              <span className="text-green-700 font-bold">午後4:00</span> - パターン認識が新しい理論につながる
-            </p>
-            <p>
-              <span className="text-green-700 font-bold">進行中</span> - 調査は続いている...
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
             </p>
           </ARGCard>
+
+          <ARGCard
+            title="No.012"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+          <ARGCard
+            title="No.038"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+           <ARGCard
+            title="No.058"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+           <ARGCard
+            title="No.077"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+           <ARGCard
+            title="No.079"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+           <ARGCard
+            title="No.090"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>
+
+           <ARGCard
+            title="No.099"
+            variant="success"
+            icon={<Lock className="w-5 h-5" />}
+          >
+            <p>
+              <span className="text-amber-700 font-bold">場所：</span> 未実施
+            </p>
+            <p>
+              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+            </p>
+          </ARGCard>          
         </div>
       ),
     },
@@ -232,61 +242,6 @@ export default function Home() {
               <p>↓</p>
               <p className="text-blue-600 font-bold">次の場所：???</p>
             </div>
-          </ARGCard>
-        </div>
-      ),
-    },
-    {
-      id: 'solutions',
-      label: '> 解答',
-      content: (
-        <div className="space-y-4">
-          <ARGCard
-            title="パズル #001 - 影と光"
-            variant="success"
-            icon={<Lightbulb className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-green-700 font-bold">パズル：</span> 「影と光が出会う場所に答がある」
-            </p>
-            <p>
-              <span className="text-green-700 font-bold">解答：</span> 日没時（ゴールデンアワー）に倉庫を撮影
-            </p>
-            <p className="text-gray-700">
-              影のパターンが次の場所への座標を示していた。
-            </p>
-          </ARGCard>
-
-          <ARGCard
-            title="パズル #002 - モールス信号"
-            variant="success"
-            icon={<Lightbulb className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-green-700 font-bold">パズル：</span> 音声ファイルの背景ノイズをデコード
-            </p>
-            <p>
-              <span className="text-green-700 font-bold">解答：</span> スペクトラム分析ソフト（Audacity）を使用
-            </p>
-            <p className="text-gray-700">
-              デコード後のメッセージ：「調査者へようこそ」
-            </p>
-          </ARGCard>
-
-          <ARGCard
-            title="パズル #003 - 暗号テキスト"
-            variant="success"
-            icon={<Lightbulb className="w-5 h-5" />}
-          >
-            <p>
-              <span className="text-green-700 font-bold">パズル：</span> 倉庫の壁のメッセージを復号化
-            </p>
-            <p>
-              <span className="text-green-700 font-bold">解答：</span> シーザー暗号（ROT13）
-            </p>
-            <p className="text-gray-700">
-              復号化後：「真実は深い場所に待っている」
-            </p>
           </ARGCard>
         </div>
       ),
