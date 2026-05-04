@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { Router as WouterRouter } from "wouter";
 
 
 function Router() {
@@ -32,6 +33,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <WouterRouter base="/arg-walkthrough-page">
           <Router />
         </TooltipProvider>
       </ThemeProvider>
