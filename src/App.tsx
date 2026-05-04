@@ -33,6 +33,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          
           <WouterRouter base="/arg-walkthrough-page">
           <Router />
         </TooltipProvider>
