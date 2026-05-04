@@ -3,6 +3,7 @@ import { AlertCircle, Lightbulb, Lock, MapPin, Users, Clock } from 'lucide-react
 import ARGHeader from '@/components/ARGHeader';
 import ARGCard from '@/components/ARGCard';
 import WalkthroughTabs from '@/components/WalkthroughTabs';
+import { Link } from "wouter";
 
 /**
  * Design Philosophy: Clean, minimal light theme
@@ -62,13 +63,13 @@ export default function Home() {
                     const num = i + 1;
                     const clueNum = num === 100 ? '100' : String(num).padStart(3, '0');
                     return (
-                      <a
+                      <Link
                         key={num}
                         href={`/clue/${clueNum}`}
                         className="aspect-square flex items-center justify-center bg-white border border-gray-300 rounded-sm hover:bg-gray-100 hover:border-gray-400 transition-colors duration-200 text-xs font-bold text-black"
-                      >
+                        >    
                         {clueNum}
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>
