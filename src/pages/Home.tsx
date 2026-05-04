@@ -214,16 +214,8 @@ export default function Home() {
           >
             <div className="space-y-3">
               <div>
-                <p className="text-blue-700 font-bold">CIPHER_MASTER</p>
-                <p className="text-gray-700">最初に座標を投稿。内部関係者の可能性あり。</p>
-              </div>
-              <div>
-                <p className="text-blue-700 font-bold">THE ARCHITECT</p>
-                <p className="text-gray-700">ゲームを仕掛けた人物。正体不明。</p>
-              </div>
-              <div>
-                <p className="text-blue-700 font-bold">THE COLLECTIVE</p>
-                <p className="text-gray-700">一緒に調査を行うコミュニティ。</p>
+                <p className="text-blue-700 font-bold">神津ひな</p>
+                <p className="text-gray-700">ある日忽然と姿を消した</p>
               </div>
             </div>
           </ARGCard>
