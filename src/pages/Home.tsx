@@ -255,7 +255,7 @@ export default function Home() {
               最終更新：{new Date().toLocaleDateString('ja-JP')} | ステータス：監視中
             </p>
             <p className="mt-2 text-gray-400">
-              【機密】 - 認可された調査者のみ
+              【機密】 - 認可された調査者
             </p>
           </div>
         </div>
