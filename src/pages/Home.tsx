@@ -221,6 +221,9 @@ export default function Home() {
               <div>
                 <p className="text-blue-700 font-bold">神津ひな</p>
                 <p className="text-gray-700">ある日忽然と姿を消した</p>
+                <p>
+                  <span className="text-amber-700 font-bold">誕生日:</span>2月3日
+                </p>  
               </div>
             </div>
           </ARGCard>
