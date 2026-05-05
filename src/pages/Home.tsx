@@ -97,10 +97,7 @@ export default function Home() {
             icon={<Lock className="w-5 h-5" />}
           >
             <p>
-              <span className="text-amber-700 font-bold">場所：</span> 未実施
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+              <span className="text-amber-700 font-bold">発見内容：</span> No.003 キャビネット（Ｂ）
             </p>
           </ARGCard>
 
