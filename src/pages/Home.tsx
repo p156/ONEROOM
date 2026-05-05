@@ -241,7 +241,7 @@ export default function Home() {
           {/* Header with image */}
           <ARGHeader
             title="ARG 攻略ガイド"
-            subtitle="代替現実ゲーム - 調査ポータル"
+            subtitle="ネコの記録"
             status="active"
             headerImage={headerImage}
           />
