@@ -14,8 +14,17 @@ import { Link } from "wouter";
 
 export default function Home() {
   const [isClueListOpen, setIsClueListOpen] = React.useState(false);
+  const [clues, setClues] = React.useState<Array<{ id: string; url: string }>>([]);
   const headerImage = '';
 
+
+  React.useEffect(() => {
+  fetch('./clues.json')
+    .then(res => res.json())
+    .then(data => setClues(data.clues))
+    .catch(err => console.error('Failed to load clues:', err));
+}, []);
+  
   const walkthroughTabs = [
     {
       id: 'overview',
@@ -59,19 +68,17 @@ export default function Home() {
             {isClueListOpen && (
               <div className="p-4 border-t border-gray-300 bg-white">
                 <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 gap-2">
-                  {Array.from({ length: 100 }, (_, i) => {
-                    const num = i + 1;
-                    const clueNum = num === 100 ? '100' : String(num).padStart(3, '0');
-                    return (
-                      <Link
-                        key={num}
-                        href={`/clue/${clueNum}`}
-                        className="aspect-square flex items-center justify-center bg-white border border-gray-300 rounded-sm hover:bg-gray-100 hover:border-gray-400 transition-colors duration-200 text-xs font-bold text-black"
-                        >    
-                        {clueNum}
-                      </Link>
-                    );
-                  })}
+                  {clues.map((clue) => (
+                <a
+                  key={clue.id}
+                  href={clue.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="aspect-square flex items-center justify-center bg-white border border-gray-300 rounded-sm hover:bg-gray-100 hover:border-gray-400 transition-colors duration-200 text-xs font-bold text-black"
+                  >
+                  {clue.id}
+                </a>
+              ))}
                 </div>
               </div>
             )}
