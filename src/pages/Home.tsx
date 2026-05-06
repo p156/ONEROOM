@@ -166,7 +166,7 @@ export default function Home() {
             icon={<Lock className="w-5 h-5" />}
           >
             <p>
-              <span className="text-amber-700 font-bold">発見内容：</span> No.085 ハンカチ
+              <span className="text-amber-700 font-bold">発見内容：</span> No.085 赤色の汚れ
             </p>
           </ARGCard>
 
