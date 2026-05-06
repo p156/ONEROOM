@@ -231,6 +231,10 @@ export default function Home() {
                 <p className="text-gray-700 font-bold">ひき逃げ事件に巻き込まれた？</p>
               </div>              
 
+              <div>
+                <p className="text-blue-700 font-bold">黒谷</p>  
+                <p className="text-gray-700 font-bold">親はなを知っている</p>
+              </div>
               
               <div>
                 <p className="text-blue-700 font-bold">サボテン</p>
