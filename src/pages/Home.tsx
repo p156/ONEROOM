@@ -156,10 +156,7 @@ export default function Home() {
             icon={<Lock className="w-5 h-5" />}
           >
             <p>
-              <span className="text-amber-700 font-bold">場所：</span> 未実施
-            </p>
-            <p>
-              <span className="text-amber-700 font-bold">発見内容：</span> 未実施
+              <span className="text-amber-700 font-bold">発見内容：</span> No.079 ハンカチ 深層フラグメント
             </p>
           </ARGCard>
 
@@ -233,7 +230,7 @@ export default function Home() {
 
               <div>
                 <p className="text-blue-700 font-bold">黒谷</p>  
-                <p className="text-gray-700 font-bold">親はなを知っている</p>
+                <p className="text-gray-700 font-bold">はなを知っている</p>
               </div>
               
               <div>
