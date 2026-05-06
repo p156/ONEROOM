@@ -231,6 +231,7 @@ export default function Home() {
               <div>
                 <p className="text-blue-700 font-bold">はな</p>  
                 <p className="text-gray-700 font-bold">親友　ある日から帰ってこない</p>
+                <p className="text-gray-700 font-bold">ひき逃げ事件に巻き込まれた？</p>
               </div>              
 
               
