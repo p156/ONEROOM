@@ -242,7 +242,19 @@ export default function Home() {
               
             </div>
           </ARGCard>
-          
+
+          <ARGCard
+            title="時系列"
+            variant="default"
+            icon={<Users className="w-5 h-5" />}
+          >
+            <div className="space-y-3">
+              <div className="space-y-2 font-mono text-sm text-gray-700">
+              <p>2025-3-29 ワンルームにくる　</p>
+            </div>
+              
+            </div>
+          </ARGCard>
         </div>
       ),
     },
